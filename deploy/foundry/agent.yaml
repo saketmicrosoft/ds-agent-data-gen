@@ -1,0 +1,11 @@
+name: autodata-agent
+version: 0.1.0
+runtime: container
+entrypoint:
+  command: ["autodata", "run-inner-loop", "--budget", "5"]
+environment:
+  AUTODATA_ENVIRONMENT: prod
+  AUTODATA_ACCEPTANCE_GAP: "0.25"
+artifacts:
+  traces: artifacts/traces
+  dataset: artifacts/datasets

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/.ropeproject
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Runtime artifacts
+data/
+artifacts/
+logs/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+bundle:
+  name: autodata-agent
+
+resources:
+  jobs:
+    autodata_inner_loop:
+      name: autodata-inner-loop
+      tasks:
+        - task_key: run-loop
+          notebook_task:
+            notebook_path: ./run_autodata.py
+          existing_cluster_id: ${var.cluster_id}
+
+variables:
+  cluster_id:
+    description: Databricks cluster id for job execution

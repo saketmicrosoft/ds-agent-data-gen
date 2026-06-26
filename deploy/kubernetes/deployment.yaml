@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autodata-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: autodata-agent
+  template:
+    metadata:
+      labels:
+        app: autodata-agent
+    spec:
+      containers:
+        - name: autodata-agent
+          image: ghcr.io/your-org/autodata-agent:latest
+          args: ["run-inner-loop", "--budget", "10"]
+          env:
+            - name: AUTODATA_ENVIRONMENT
+              value: "prod"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: autodata-agent
+spec:
+  selector:
+    app: autodata-agent
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

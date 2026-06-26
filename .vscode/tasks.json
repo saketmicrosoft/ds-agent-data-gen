@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run inner loop",
+      "type": "shell",
+      "command": "autodata run-inner-loop --budget 3",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "pytest",
+      "problemMatcher": []
+    }
+  ]
+}

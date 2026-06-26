@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: autodata inner loop",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "autodata_agent.cli",
+      "args": ["run-inner-loop", "--budget", "3"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "AgentDev CLI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "agentdev",
+      "args": ["run"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
